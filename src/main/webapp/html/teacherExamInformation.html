@@ -1,0 +1,197 @@
+<!--考试信息-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师首页</title>
+    <link rel="icon" href="../img/logo.ico" type="img/x-ico" />
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script type="text/javascript" src="../js/teacherExamInformation.js"></script>
+</head>
+    <body style="background-color: #EFF3F7">
+        <div id="p1" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "
+                   data-options="style:{position:'absolute',left:20,top:4}">
+            <p>
+                <font size="3" style="color: #0052A3">当前位置->考试信息</font>
+            </p>
+        </div>
+        <div id="p2" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "
+             data-options="style:{position:'absolute',left:1320,top:4}">
+            <p>
+                <input class="easyui-textbox" id="selectExamInformation" data-options="iconCls:'icon-search'" prompt="请输入考试名称" style="width:250px;height: 40px">
+                <button class="layui-btn layui-btn-normal" onclick="selectExamInformation()">查询考试</button>
+            </p>
+        </div>
+        <div id="p3" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "
+             data-options="style:{position:'absolute',left:20,top:54}">
+            <p>
+                <button class="layui-btn" onclick="createExam()">创建考试</button>
+            </p>
+        </div>
+        <div id="p7" class="easyui-panel" style="background:transparent;width: 1620px;height: 540px;border:transparent "
+             data-options="style:{position:'absolute',left:20,top:90}">
+            <div class="layui-form">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <td>考试编号</td>
+                        <td>考试名称</td>
+                        <td>创建时间</td>
+                        <td>考试科目</td>
+                        <td>选用试卷</td>
+                        <td>考试总分</td>
+                        <td>考试时长</td>
+                        <td>考试码</td>
+                        <td>创建人</td>
+                        <td align="center">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody id="mytab1">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="p9" class="easyui-panel" style="background-color: #FFFFFF;width: 500px;height: 410px;"
+             data-options="style:{position:'absolute',left:520,top:115}">
+            <table width="490px" >
+                <tr>
+                    <td align="center">
+                        <font size="5">添加考试</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="60px">
+                        <font size="3">考试名称:</font>
+                        <input class="easyui-textbox" id="examName" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考试科目:</font>
+                        <input class="easyui-textbox" id="subject" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考试时长:</font>
+                        <input class="easyui-textbox" id="examDate" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考试总分:</font>
+                        <input class="easyui-textbox" id="score" disabled="disabled" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">选用试卷:</font>
+                        <input class="easyui-textbox" id="examId" disabled="disabled" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考&nbsp;&nbsp;试&nbsp;&nbsp;码:</font>
+                        <input class="easyui-textbox" id="examCode" disabled="disabled" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="110px">
+                        <button class="layui-btn" onclick="addExam()">添加试卷</button>
+                        <button class="layui-btn" onclick="sureExam()">确认添加</button>
+                        <button class="layui-btn" onclick="closeExam()">关闭界面</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="p10" class="easyui-panel" style="background-color: #FFFFFF;width: 770px;height: 420px;"
+             data-options="style:{position:'absolute',left:520,top:115}">
+            <table width="760px" >
+                <tr>
+                    <td align="center">
+                        <font size="5">添加试卷</font>
+                    </td>
+                </tr>
+            </table>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <td></td>
+                    <td>试卷编号</td>
+                    <td>试卷名称</td>
+                    <td>试卷总分</td>
+                    <td>所属科目</td>
+                </tr>
+                </thead>
+                <tbody id="mytab">
+                </tbody>
+            </table>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="layui-btn" onclick="addQuestion()">确认添加</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="layui-btn" onclick="closeQuestion()">关闭界面</button>
+        </div>
+
+        <div id="p11" class="easyui-panel" style="background-color: #FFFFFF;width: 500px;height: 410px;"
+             data-options="style:{position:'absolute',left:520,top:115}">
+            <table width="490px" >
+                <tr>
+                    <td align="center">
+                        <font size="5">修改考试</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="60px">
+                        <font size="3">考试名称:</font>
+                        <input class="easyui-textbox" id="examName1" style="width:300px">
+                        <input id="updateId" style="display: none">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考试科目:</font>
+                        <input class="easyui-textbox" id="subject1" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考试时长:</font>
+                        <input class="easyui-textbox" id="examDate1" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考试总分:</font>
+                        <input class="easyui-textbox" id="score1" disabled="disabled" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">选用试卷:</font>
+                        <input class="easyui-textbox" id="examId1" disabled="disabled" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="40px">
+                        <font size="3">考&nbsp;&nbsp;试&nbsp;&nbsp;码:</font>
+                        <input class="easyui-textbox" id="examCode1" disabled="disabled" style="width:300px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="110px">
+                        <button class="layui-btn" onclick="sureUpdateExam()">确认修改</button>
+                        <button class="layui-btn" onclick="closeExam()">关闭界面</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

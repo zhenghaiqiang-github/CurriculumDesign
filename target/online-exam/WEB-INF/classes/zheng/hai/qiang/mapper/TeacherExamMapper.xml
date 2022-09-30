@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zheng.hai.qiang.mapper.TeacherExamMapper">
+
+    <select id="selectexamcounts"  resultType="Integer" >
+        SELECT COUNT(*) FROM exam t
+    </select>
+    <select id="addExam"  parameterType="zheng.hai.qiang.pojo.Exam">
+        INSERT INTO exam VALUES(NULL,'${name}','${totalScore}','${createDate}','${person}','${subject}','${book}','${chapter}','${question}');
+    </select>
+
+    <select id="findExam" parameterType="hashmap" resultType="zheng.hai.qiang.pojo.Exam" >
+        SELECT t.`id`,t.`name`,t.`createDate`,t.`totalScore`,t.`person`,t.`subject`,t.`book`,t.`chapter`,t.`book`,t.`question` FROM exam t
+        <where>
+            <if test="#{name} != null">
+                t.`person` =#{name}
+            </if>
+
+            <if test="#{selectExam} != null">
+                and t.`name` like '%${selectExam}%'
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleExam" parameterType="hashmap">
+        DELETE FROM exam WHERE exam.id = #{id}
+    </delete>
+
+    <select id="seekExamById" parameterType="hashmap" resultType="zheng.hai.qiang.pojo.Exam" >
+        SELECT t.`id`,t.`name`,t.`createDate`,t.`totalScore`,t.`person`,t.`subject`,t.`book`,t.`chapter`,t.`book`,t.`question` FROM exam t where t.`id` =#{id}
+    </select>
+
+    <update id="updateExam" parameterType="zheng.hai.qiang.pojo.Exam">
+        UPDATE exam SET exam.name = #{name},exam.subject = #{subject},exam.book = #{book},exam.chapter = #{chapter} WHERE exam.id = #{id};
+    </update>
+
+</mapper>

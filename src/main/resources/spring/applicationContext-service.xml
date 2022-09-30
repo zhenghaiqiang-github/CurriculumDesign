@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<bean id="RegisteService" name="RegisteService" class="zheng.hai.qiang.serviceImpl.RegisteServiceImp"></bean>
+	<bean id="LoginService" name="LoginService" class="zheng.hai.qiang.serviceImpl.LoginServiceImp"></bean>
+	<bean id="TeacherQuestionService" name="TeacherQuestionService" class="zheng.hai.qiang.serviceImpl.TeacherQuestionServiceImp"></bean>
+	<bean id="TeacherExamService" name="TeacherExamService" class="zheng.hai.qiang.serviceImpl.TeacherExamServiceImp"></bean>
+	<bean id="TeacherExamInformationService" name="TeacherExamInformationService" class="zheng.hai.qiang.serviceImpl.TeacherExamInformationServiceImp"></bean>
+
+	<bean id="StudentExamService" name="StudentExamService" class="zheng.hai.qiang.serviceImpl.StudentExamServiceImp"></bean>
+	<bean id="StudentInformationService" name="StudentInformationService" class="zheng.hai.qiang.serviceImpl.StudentInformationServiceImp"></bean>
+	<bean id="ScoreAnalysisService" name="ScoreAnalysisService" class="zheng.hai.qiang.serviceImpl.ScoreAnalysisServiceImp"></bean>
+	<bean id="ExamRankService" name="ExamRankService" class="zheng.hai.qiang.serviceImpl.ExamRankServiceImp"></bean>
+	<bean id="FailQuestionService" name="FailQuestionService" class="zheng.hai.qiang.serviceImpl.FailQuestionServiceImp"></bean>
+</beans>

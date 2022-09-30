@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <link rel="icon" href="../img/logo.ico" type="img/x-ico" />
+    <script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/teacherLogin.js"></script>
+</head>
+    <body background="../img/bg.jpg" style=" background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+        <div id="p" class="easyui-panel" style="background:transparent;width: 60px;border:transparent "
+                   data-options="style:{position:'absolute',left:400,top:0}">
+            <p>
+            <div style="width:50px; height:50px; border-radius:100%; overflow:hidden;">
+                <img src="../img/logo.jpg" style="max-width: 50px;max-height: 50px;vertical-align:middle"/>
+            </div>
+            </p>
+        </div>
+
+        <div id="p4" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "
+             data-options="style:{position:'absolute',left:460,top:4}">
+            <p>
+            <font size="6" style="color: #0052A3">在线考试系统</font>
+            </p>
+        </div>
+
+        <div id="p1" class="easyui-panel" style="background:transparent;width: 350px;border:transparent "
+             data-options="style:{position:'absolute',left:1300,top:0}">
+            <p>
+                <a class="easyui-linkbutton" data-options="plain:true" href="../html/registe.html"><font size="2">新用户注册</font></a>
+                <a class="easyui-linkbutton"  data-options="plain:true" href="../html/login.html" ><font size="2">学生端</font></a>
+                <a class="easyui-linkbutton"  data-options="plain:true" ><font size="2">管理端</font></a>
+                <a class="easyui-linkbutton" data-options="plain:true" ><font size="2">English</font></a>
+            </p>
+        </div>
+
+        <!--底部增加背景-->
+        <!--<div id="p4" class="easyui-panel" style="background-color: rgba(137,137,137,0.5);width: 410px;height: 340px;border:transparent"
+             data-options="style:{position:'absolute',left:1200,top:310}">
+        </div>-->
+
+        <div id="p2" class="easyui-panel" style="width:350px;height:300px;
+                padding:10px;background:transparent;border:transparent"
+                data-options="style:{position:'absolute',left:1240,top:310}">
+            <table>
+                <tr>
+                    <td>
+                        <h2 style="text-align: center">教师入口</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="easyui-textbox" id="account" prompt="请输入账号"
+                               style="width:300px;height: 40px" data-options="">
+                    </td>
+                </tr>
+                <tr><td height="30px"></td></tr>
+                <tr>
+                    <td>
+                        <input class="easyui-passwordbox" id="password" prompt="请输入密码"
+                               style="width:300px;height: 40px;" data-options="">
+                    </td>
+                </tr>
+                <tr><td height="30px"></td></tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="remenber" value="1" />记住密码
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a onclick="test()"><font color="blue">忘记密码</font></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">
+                        <a href="#" class="easyui-linkbutton" style="width: 100px;text-align: center" onclick="login()">
+                            登&nbsp;&nbsp;&nbsp;录
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <input  id="s1" style="display: none" value="5555">
+        </div>
+    </body>
+</html>

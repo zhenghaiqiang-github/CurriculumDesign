@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zheng.hai.qiang.mapper.RegisteMapper">
+
+    <select id="selectAccount"  resultType="String">
+        SELECT t.`account` FROM STUDENT t WHERE t.`account` = #{0};
+    </select>
+
+    <select id="addAccount"  parameterType="zheng.hai.qiang.pojo.Student">
+        INSERT INTO STUDENT VALUES(NULL,'${name}','${account}','${password}','${question}','${answer}');
+    </select>
+
+    <select id="selectTeaAccount"  resultType="String">
+        SELECT t.`account` FROM TEACHER t WHERE t.`account` = #{0};
+    </select>
+
+    <select id="addTeaAccount"  parameterType="zheng.hai.qiang.pojo.Teacher">
+        INSERT INTO TEACHER VALUES(NULL,'${name}','${account}','${password}','${question}','${answer}');
+    </select>
+
+</mapper>

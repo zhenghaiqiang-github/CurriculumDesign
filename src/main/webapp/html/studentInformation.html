@@ -1,0 +1,75 @@
+<!--考生信息-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师首页</title>
+    <link rel="icon" href="../img/logo.ico" type="img/x-ico" />
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script type="text/javascript" src="../js/studentInformation.js"></script>
+</head>
+    <body style="background-color: #EFF3F7">
+        <div id="p1" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "
+                   data-options="style:{position:'absolute',left:20,top:4}">
+            <p>
+                <font size="3" style="color: #0052A3">当前位置->考生信息</font>
+            </p>
+        </div>
+
+        <div id="p2" class="easyui-panel" style="background:transparent;width: 1900px;height: 500px;border:transparent "
+             data-options="style:{position:'absolute',left:20,top:60}">
+            <p>
+                <font size="4" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;信息查询</font>
+                &nbsp;&nbsp;&nbsp;
+                <font size="2" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;考试名称</font>
+                <input class="easyui-textbox" id="examName" style="width:200px;height: 30px">
+                &nbsp;&nbsp;&nbsp;
+                <font size="2" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;考试学科</font>
+                <input class="easyui-textbox" id="examSubject" style="width:200px;height: 30px">
+                &nbsp;&nbsp;&nbsp;
+                <font size="2" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;考试码</font>
+                <input class="easyui-textbox" id="examCode" style="width:200px;height: 30px">
+                &nbsp;&nbsp;&nbsp;
+                <font size="2" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;考生账号</font>
+                <input class="easyui-textbox" id="studentAccount" style="width:200px;height: 30px">
+                &nbsp;&nbsp;&nbsp;
+                <font size="2" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;考生姓名</font>
+                <input class="easyui-textbox" id="studentName" style="width:200px;height: 30px">
+                &nbsp;&nbsp;&nbsp;
+                <button class="layui-btn layui-btn-normal" onclick="seekAll()">查询信息</button>
+            </p>
+        </div>
+        <div id="p6" class="easyui-panel" style="background:transparent;width: 1620px;height: 40px;border:transparent "
+             data-options="style:{position:'absolute',left:20,top:115}">
+            <p>
+                <font size="4" style="color: #6a6a6a">&nbsp;&nbsp;&nbsp;查询结果</font>
+            </p>
+        </div>
+        <div id="p3" class="easyui-panel" style="background:transparent;width: 1620px;height: 670px;border:transparent "
+             data-options="style:{position:'absolute',left:20,top:150}">
+            <div class="layui-form">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <td>信息编号</td>
+                        <td>考生账号</td>
+                        <td>考生姓名</td>
+                        <td>考试名称</td>
+                        <td>考试学科</td>
+                        <td>考试码</td>
+                        <td>成绩</td>
+                    </tr>
+                    </thead>
+                    <tbody id="mytab">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </body>
+</html>

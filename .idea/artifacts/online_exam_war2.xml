@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="online-exam:war2">
+    <output-path>G:/</output-path>
+    <root id="archive" name="online-exam_war.war">
+      <element id="artifact" artifact-name="online-exam:war exploded" />
+    </root>
+  </artifact>
+</component>

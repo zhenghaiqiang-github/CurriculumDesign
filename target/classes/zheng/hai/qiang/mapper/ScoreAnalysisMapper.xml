@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zheng.hai.qiang.mapper.ScoreAnalysisMapper">
+
+    <select id="findExamCode" parameterType="hashmap" resultType="zheng.hai.qiang.pojo.ExamInformation" >
+        SELECT t.`ExamCode` FROM examinformation t WHERE t.`person`= #{person} ;
+    </select>
+
+    <select id="selectAvg" parameterType="String" resultType="java.util.HashMap" >
+        SELECT COUNT(id),MAX(score),MIN(score),AVG(score),examCode,examName FROM examresult WHERE examCode = #{0};
+    </select>
+
+</mapper>

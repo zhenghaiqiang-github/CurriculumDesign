@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login</title>
+    <link href="../html/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+
+    <!-- login module -->
+    <div class="login-box">
+        <div id="login-title">
+            Login
+        </div>
+
+        <div class="input">
+            <input type="text" id="userName" placeholder="Input your userName" name="userName" value="${username}">
+        </div>
+        <div class="input">
+            <input type="password" id="password" placeholder="Input your password" name="password" value="${password}">
+        </div>
+
+        <div id="login">
+            <input type="button" value="Login" id="login-btn" />
+        </div>
+
+        <div id="register">
+            <input type="button" value="To Register" id="to-register-btn" />
+        </div>
+
+        <div id="welcome">
+            <img src="../html/static/img/loading.gif" />
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+
+</body>
+</html>

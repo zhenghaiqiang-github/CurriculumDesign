@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zheng.hai.qiang.mapper.ExamRankMapper">
+
+    <select id="selectExamRank" parameterType="String" resultType="zheng.hai.qiang.pojo.ExamResult" >
+        SELECT * FROM examresult WHERE examCode = #{0} ORDER BY score DESC;
+    </select>
+
+</mapper>

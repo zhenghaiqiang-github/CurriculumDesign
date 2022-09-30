@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错题统计</title>
+    <link rel="icon" href="../img/logo.ico" type="img/x-ico" />
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script type="text/javascript" src="../js/failQuestion.js"></script>
+</head>
+<body style="background-color: #EFF3F7">
+<div id="p1" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "
+     data-options="style:{position:'absolute',left:20,top:4}">
+    <p>
+        <font size="3" style="color: #0052A3">当前位置->错题统计</font>
+    </p>
+</div>
+<!--border:transparent-->
+<div id="container"  class="easyui-panel" style="background:transparent;width: 1600px;height: 700px;border:transparent "
+     data-options="style:{position:'absolute',left:50,top:80}">
+
+</div>
+<div id="wrapper" class="easyui-panel" style="background:transparent;width: 1600px;height: 700px;border:transparent "
+     data-options="style:{position:'absolute',left:50,top:780}">
+    <button id="plain">普通</button>
+    <button id="inverted">反转</button>
+    <button id="polar">极地图</button>
+</div>
+</body>
+</html>

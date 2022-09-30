@@ -1,0 +1,740 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+    <title>厦门理工学院教务</title>
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+    <script type="text/javascript" src="../easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/utils/checkLogin.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+
+    <script type="text/javascript" src="../js/registe.js"></script>
+
+
+    <!--		<link rel="shortcut icon" href="/favicon.ico">-->
+    <link type="text/css" rel="styleSheet" href="../easyui/app.4ce02310a036c1f949e6bfac1a75d6cc.css"/>
+    <!--		<link href="app.4ce02310a036c1f949e6bfac1a75d6cc.css" rel="stylesheet">-->
+    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/5.d14cc1be6ec7e100eeef.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/0.6242f122ed89abd1f691.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/7.d6f7637362d3113e0e5c.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style type="text/css">
+        .basicInfo-left {
+            width: 250px;
+            height: 250px;
+        }
+
+        .basicInfo-left img {
+            width: 100%;
+            height: 100%;
+            border-radius: 450px;
+        }
+    </style>
+</head>
+<body>
+<script src="../html/static/tinymce4.7.5/tinymce.min.js"></script>
+<div id="app">
+    <div data-v-632e4b08="" clas="main">
+        <div data-v-632e4b08="" class="header-area vue-fixed-header">
+            <div data-v-632e4b08="" class="clever-main-menu">
+                <div data-v-632e4b08="" class="classy-nav-container breakpoint-off">
+                    <nav data-v-632e4b08="" id="cleverNav" class="classy-navbar justify-content-between">
+                        <img src="../html/static/img/core-img/login-logo.png">
+                        <!--	<a data-v-632e4b08="" href="/"
+                             class="nav-brand hidden-sm-only">厦门理工学院</a>-->
+                        <div data-v-632e4b08="" class="classy-menu">
+                            <div data-v-632e4b08="" class="classynav">
+                                <!--                                <div data-v-632e4b08="" class="search-area hidden-sm-only">-->
+                                <!--                                    <div data-v-632e4b08="" class="el-input el-input&#45;&#45;prefix">-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;<input type="search" autocomplete="off" name="search" id="search"-->
+                                <!--                                                      placeholder="搜索" class="el-input__inner"><span-->
+                                <!--                                            class="el-input__prefix"><i-->
+                                <!--                                            class="el-input__icon el-icon-search"></i></span>-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <ul data-v-632e4b08="" role="menubar" class="el-menu--horizontal el-menu">
+                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item is-active"
+                                        style="color: rgb(35, 35, 35); border-bottom-color: rgb(35, 35, 35);"><a href="../html/welcome.html">首页</a>
+                                    </li>
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item"-->
+                                    <!--                                        style="color: rgba(0, 0, 0, 0.45); border-bottom-color: transparent;">考试-->
+                                    <!--                                    </li>-->
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item"-->
+                                    <!--                                        style="color: rgba(0, 0, 0, 0.45); border-bottom-color: transparent;">课程-->
+                                    <!--                                    </li>-->
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" aria-haspopup="true" class="el-submenu"-->
+                                    <!--                                        tabindex="0">-->
+                                    <!--                                        <div class="el-submenu__title"-->
+                                    <!--                                             style="border-bottom-color: transparent; color: rgba(0, 0, 0, 0.45);">记录<i-->
+                                    <!--                                                class="el-submenu__icon-arrow el-icon-arrow-down"></i></div>-->
+                                    <!--                                        <div class="el-menu&#45;&#45;horizontal" style="display: none;">-->
+                                    <!--                                            <ul role="menu" class="el-menu el-menu&#45;&#45;popup el-menu&#45;&#45;popup-bottom-start">-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">考试记录-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">错题本-->
+                                    <!--                                                </li>-->
+                                    <!--                                            </ul>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </li>-->
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" aria-haspopup="true" class="el-submenu"-->
+                                    <!--                                        tabindex="0">-->
+                                    <!--                                        <div class="el-submenu__title"-->
+                                    <!--                                             style="border-bottom-color: transparent; color: rgba(0, 0, 0, 0.45);">帮助<i-->
+                                    <!--                                                class="el-submenu__icon-arrow el-icon-arrow-down"></i></div>-->
+                                    <!--                                        <div class="el-menu&#45;&#45;horizontal" style="display: none;">-->
+                                    <!--                                            <ul role="menu" class="el-menu el-menu&#45;&#45;popup el-menu&#45;&#45;popup-bottom-start">-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    源码地址-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    部署文档-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    更新日志-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    规划总览-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    管理后台-->
+                                    <!--                                                </li>-->
+                                    <!--                                            </ul>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </li>-->
+                                    <!---->
+                                </ul>
+                                <div data-v-632e4b08="" class="register-login-area"><a href="../html/registe.html"
+                                                                                       class="btn">注册</a>
+                                    <a href="../html/login.html"  class="btn">登录</a></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <section data-v-632e4b08="" class="main">
+            <div class="main-wrapper">
+                <div class="main-content">
+                    <div class="bg">
+                        <svg id="bg_svg" viewBox="0 0 1440 480" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             preserveAspectRatio="xMidYMid slice">
+                            <filter id="blur">
+                                <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                            </filter>
+                            <image xlink:href="static/img/login/login-bg.jpg" width="1440" height="480"
+                                   filter="url(#blur)"></image>
+                        </svg>
+                        <div class="login-wrap">
+                            <div class="el-tabs el-tabs--top">
+                                <div class="el-tabs__header is-top">
+                                    <div class="el-tabs__nav-wrap is-top">
+                                        <div class="el-tabs__nav-scroll">
+                                            <div role="tablist" class="el-tabs__nav is-top"
+                                                 style="transform: translateX(0px);">
+                                                <div class="el-tabs__active-bar is-top"
+                                                     style="width: 40px; transform: translateX(0px);"></div>
+                                                <div id="tab-/register" aria-controls="pane-/register" role="tab"
+                                                     aria-selected="true" tabindex="0"
+                                                     class="el-tabs__item is-top is-active"><a href="../html/registe.html"><font size="4" >注册</font></a>
+                                                </div>
+                                                <div id="tab-/login" aria-controls="pane-/login" role="tab"
+                                                     tabindex="-1" class="el-tabs__item is-top"><a href="../html/login.html"><font size="4">登录</font></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-tabs__content">
+                                    <form id="ff">
+                                        <table>
+
+
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">姓&nbsp;&nbsp;&nbsp;&nbsp;名:</font>
+                                                    <input class="easyui-textbox" id="name"
+                                                           style="width:230px;height:32px">
+                                                </td>
+                                            </tr>
+                                            <tr style="height:15px ">
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">账&nbsp;&nbsp;&nbsp;&nbsp;号:</font>
+                                                    <input class="easyui-textbox" id="account"
+                                                           style="width:230px;height:32px">
+                                                </td>
+                                            </tr>
+
+                                            <tr style="height:20px ">
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">密&nbsp;&nbsp;&nbsp;&nbsp;码:</font>
+                                                    <input class="easyui-passwordbox" id="password"
+                                                           style="width:230px;height:32px">
+                                                </td>
+                                            </tr>
+                                            <tr style="height:15px ">
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">确认密码:</font>
+                                                    <input class="easyui-passwordbox" id="repassword"
+                                                           style="width:215px;height:32px">
+                                                </td>
+                                            </tr>
+                                            <tr style="height:15px ">
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">密保问题:</font>
+                                                    <input class="easyui-textbox" id="question"
+                                                           style="width:215px;height:32px">
+                                                </td>
+                                            </tr>
+                                            <tr style="height:15px ">
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">密保答案:</font>
+                                                    <input class="easyui-textbox" id="answer"
+                                                           style="width:215px;height:32px">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+
+                                                    <font size="3">身&nbsp;&nbsp;&nbsp;&nbsp;份:</font>
+                                                    <input type="radio" name="remenber" value="student"/><font size="3">学生</font>
+
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="radio" name="remenber" value="teacher"/><font size="3">教师</font>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center">
+
+
+                                                    <a href="#" class="easyui-linkbutton"
+                                                       style="width: 100px;text-align: center"
+                                                       onclick="registe()">
+                                                        立即注册
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+
+
+                                    <div class="third-login">
+                                        <div class="el-row">
+                                            <div class="third-link el-col el-col-24"><a title="微信登录" href=""><span
+                                                    class="wechat"></span>微信
+                                            </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+</div>
+</div>
+<!--		<script type="text/javascript" src="/static/js/manifest.98df32cdfdd179a4980e.js"></script>-->
+<!--		<script type="text/javascript" src="/static/js/vendor.4c0f75e845590016a9f5.js"></script>-->
+<!--		<script type="text/javascript" src="/static/js/app.723542aade02d41fdb1c.js"></script>-->
+</body>
+</html>
+
+
+<!--<!DOCTYPE HTML>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    lt;!ndash;    <meta name="viewport" content="width=device-width,initial-scale=1">ndash;gt;-->
+<!--    <title>厦门理工学院教务</title>-->
+<!--    lt;!ndash;		<link rel="shortcut icon" href="/favicon.ico">ndash;gt;-->
+<!--    <link type="text/css" rel="styleSheet" href="../easyui/app.4ce02310a036c1f949e6bfac1a75d6cc.css"/>-->
+<!--    lt;!ndash;		<link href="app.4ce02310a036c1f949e6bfac1a75d6cc.css" rel="stylesheet">ndash;gt;-->
+<!--    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/5.d14cc1be6ec7e100eeef.js"></script>-->
+<!--    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/0.6242f122ed89abd1f691.js"></script>-->
+<!--    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/7.d6f7637362d3113e0e5c.js"></script>-->
+<!--    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">-->
+<!--    <script type="text/javascript" src="../easyui/jquery.min.js"></script>-->
+<!--    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>-->
+<!--    <script type="text/javascript" src="../js/registe.js"></script>-->
+<!--    <link rel="stylesheet" href="../layui/css/layui.css">-->
+<!--    <style type="text/css">-->
+<!--        .basicInfo-left{-->
+<!--            width: 250px;-->
+<!--            height: 250px;-->
+<!--        }-->
+<!--        .basicInfo-left img{-->
+<!--            width: 100%;-->
+<!--            height: 100%;-->
+<!--            border-radius: 450px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script src="../html/static/tinymce4.7.5/tinymce.min.js"></script>-->
+<!--<div id="app">-->
+<!--    <div data-v-632e4b08="" clas="main">-->
+<!--        <div data-v-632e4b08="" class="header-area vue-fixed-header">-->
+<!--            <div data-v-632e4b08="" class="clever-main-menu">-->
+<!--                <div data-v-632e4b08="" class="classy-nav-container breakpoint-off">-->
+<!--                    <nav data-v-632e4b08="" id="cleverNav" class="classy-navbar justify-content-between">-->
+<!--                        <img src="../html/static/img/core-img/login-logo.png">-->
+<!--                        lt;!ndash;	<a data-v-632e4b08="" href="/"-->
+<!--                             class="nav-brand hidden-sm-only">厦门理工学院</a>ndash;gt;-->
+<!--                        <div data-v-632e4b08="" class="classy-menu">-->
+<!--                            <div data-v-632e4b08="" class="classynav">-->
+<!--                                <div data-v-632e4b08="" class="search-area hidden-sm-only">-->
+<!--                                    <div data-v-632e4b08="" class="el-input el-input#45;#45;prefix">-->
+<!--                                        lt;!ndash;ndash;gt;<input type="search" autocomplete="off" name="search" id="search"-->
+<!--                                                      placeholder="搜索" class="el-input__inner"><span-->
+<!--                                            class="el-input__prefix"><i-->
+<!--                                            class="el-input__icon el-icon-search"></i></span>-->
+<!--                                        lt;!ndash;ndash;gt;-->
+<!--                                        lt;!ndash;ndash;gt;-->
+<!--                                        lt;!ndash;ndash;gt;-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <ul data-v-632e4b08="" role="menubar" class="el-menu#45;#45;horizontal el-menu">-->
+<!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item is-active"-->
+<!--                                        style="color: rgb(35, 35, 35); border-bottom-color: rgb(35, 35, 35);"><a href="../html/welcome.html">首页</a>-->
+<!--                                    </li>-->
+<!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item"-->
+<!--                                        style="color: rgba(0, 0, 0, 0.45); border-bottom-color: transparent;">考试-->
+<!--                                    </li>-->
+<!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item"-->
+<!--                                        style="color: rgba(0, 0, 0, 0.45); border-bottom-color: transparent;">课程-->
+<!--                                    </li>-->
+<!--                                    <li data-v-632e4b08="" role="menuitem" aria-haspopup="true" class="el-submenu"-->
+<!--                                        tabindex="0">-->
+<!--                                        <div class="el-submenu__title"-->
+<!--                                             style="border-bottom-color: transparent; color: rgba(0, 0, 0, 0.45);">记录<i-->
+<!--                                                class="el-submenu__icon-arrow el-icon-arrow-down"></i></div>-->
+<!--                                        <div class="el-menu#45;#45;horizontal" style="display: none;">-->
+<!--                                            <ul role="menu" class="el-menu el-menu#45;#45;popup el-menu#45;#45;popup-bottom-start">-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">考试记录-->
+<!--                                                </li>-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">错题本-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    <li data-v-632e4b08="" role="menuitem" aria-haspopup="true" class="el-submenu"-->
+<!--                                        tabindex="0">-->
+<!--                                        <div class="el-submenu__title"-->
+<!--                                             style="border-bottom-color: transparent; color: rgba(0, 0, 0, 0.45);">帮助<i-->
+<!--                                                class="el-submenu__icon-arrow el-icon-arrow-down"></i></div>-->
+<!--                                        <div class="el-menu#45;#45;horizontal" style="display: none;">-->
+<!--                                            <ul role="menu" class="el-menu el-menu#45;#45;popup el-menu#45;#45;popup-bottom-start">-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+<!--                                                    源码地址-->
+<!--                                                </li>-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+<!--                                                    部署文档-->
+<!--                                                </li>-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+<!--                                                    更新日志-->
+<!--                                                </li>-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+<!--                                                    规划总览-->
+<!--                                                </li>-->
+<!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+<!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+<!--                                                    管理后台-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    lt;!ndash;ndash;gt;-->
+<!--                                </ul>-->
+<!--                                <div data-v-632e4b08="" class="register-login-area"><a href="../html/registe.html"-->
+<!--                                                                                       class="btn">注册</a>-->
+<!--                                    <a href="../html/login.html"  class="btn">登录</a></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </nav>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div id="p41" class="easyui-panel" style="background-color: #FFFFFF;width: 700px;height: 500px;border:transparent"-->
+<!--             data-options="style:{position:'absolute',left:600,top:200}">-->
+<!--            <p style="text-align: center">-->
+<!--                <font size="6">注册账号</font>-->
+<!--            </p>-->
+<!--            <form id="ff">-->
+<!--                <table>-->
+<!--                    <tr style="height:15px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">身份:</font>-->
+<!--                            <input type="radio" name="remenber" value="student" /><font size="3">学生</font>-->
+<!--                            -->
+<!--                            -->
+<!--                            <input type="radio" name="remenber" value="teacher" /><font size="3">教师</font>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">姓名:</font>-->
+<!--                            <input class="easyui-textbox" id="name" style="width:50%;height:32px">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr style="height:15px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">账号:</font>-->
+<!--                            <input class="easyui-textbox" id="account" style="width:50%;height:32px">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr style="height:20px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">密码:</font>-->
+<!--                            <input class="easyui-passwordbox" id="password" style="width:50%;height:32px">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr style="height:15px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">确认密码:</font>-->
+<!--                            <input class="easyui-passwordbox" id="repassword" style="width:50%;height:32px">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr style="height:15px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">密保问题:</font>-->
+<!--                            <input class="easyui-textbox" id="question" style="width:50%;height:32px">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr style="height:15px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <font size="3">密保答案:</font>-->
+<!--                            <input class="easyui-textbox" id="answer" style="width:50%;height:32px">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr style="height:15px ">-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align: center">-->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            -->
+<!--                            <a href="#" class="easyui-linkbutton" style="width: 100px;text-align: center"-->
+<!--                               onclick="registe()">-->
+<!--                                立即注册-->
+<!--                            </a>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </form>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+<!--lt;!ndash;		<script type="text/javascript" src="/static/js/manifest.98df32cdfdd179a4980e.js"></script>ndash;gt;-->
+<!--lt;!ndash;		<script type="text/javascript" src="/static/js/vendor.4c0f75e845590016a9f5.js"></script>ndash;gt;-->
+<!--lt;!ndash;		<script type="text/javascript" src="/static/js/app.723542aade02d41fdb1c.js"></script>ndash;gt;-->
+<!--</body>-->
+<!--</html>-->
+
+<!--lt;!ndash;<!DOCTYPE html>ndash;gt;-->
+<!--lt;!ndash;<html lang="en" xmlns="http://www.w3.org/1999/html">ndash;gt;-->
+<!--lt;!ndash;<head>ndash;gt;-->
+<!--lt;!ndash;    <meta charset="UTF-8">ndash;gt;-->
+<!--lt;!ndash;    <title>登录界面</title>ndash;gt;-->
+<!--lt;!ndash;    <link rel="icon" href="../img/logo.ico" type="img/x-ico" />ndash;gt;-->
+<!--lt;!ndash;    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">ndash;gt;-->
+<!--lt;!ndash;    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../easyui/jquery.min.js"></script>ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../js/utils/checkLogin.js"></script>ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../js/login.js"></script>ndash;gt;-->
+
+<!--lt;!ndash;</head>ndash;gt;-->
+<!--lt;!ndash;<body  style="background-color: #f9f9f9;background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">ndash;gt;-->
+<!--lt;!ndash;<div id="p" class="easyui-panel" style="background:transparent;width: 60px;border:transparent "ndash;gt;-->
+<!--lt;!ndash;     data-options="style:{position:'absolute',left:400,top:0}">ndash;gt;-->
+<!--lt;!ndash;    <p>ndash;gt;-->
+<!--lt;!ndash;    <div style="width:50px; height:50px; border-radius:100%; overflow:hidden;">ndash;gt;-->
+<!--lt;!ndash;        <img src="../img/logo.jpg" style="max-width: 50px;max-height: 50px;vertical-align:middle"/>ndash;gt;-->
+<!--lt;!ndash;    </div>ndash;gt;-->
+<!--lt;!ndash;    </p>ndash;gt;-->
+<!--lt;!ndash;</div>ndash;gt;-->
+
+<!--lt;!ndash;<div id="p2" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "ndash;gt;-->
+<!--lt;!ndash;     data-options="style:{position:'absolute',left:460,top:4}">ndash;gt;-->
+<!--lt;!ndash;    <p>ndash;gt;-->
+<!--lt;!ndash;        <font size="6" style="color: #0052A3">在线考试系统</font>ndash;gt;-->
+<!--lt;!ndash;    </p>ndash;gt;-->
+<!--lt;!ndash;</div>ndash;gt;-->
+
+<!--lt;!ndash;<div id="p1" class="easyui-panel" style="background:transparent;width: 350px;border:transparent "ndash;gt;-->
+<!--lt;!ndash;     data-options="style:{position:'absolute',left:1300,top:0}">ndash;gt;-->
+<!--lt;!ndash;    <p>ndash;gt;-->
+<!--lt;!ndash;        <a class="easyui-linkbutton"  data-options="plain:true" ><font size="2">首页</font></a>ndash;gt;-->
+<!--lt;!ndash;        <a class="easyui-linkbutton" data-options="plain:true" href="../html/registe.html"><font size="2">注册</font></a>ndash;gt;-->
+<!--lt;!ndash;        <a class="easyui-linkbutton"  data-options="plain:true" href="../html/welcome.html"><font size="2">管理端</font></a>ndash;gt;-->
+<!--lt;!ndash;    </p>ndash;gt;-->
+<!--lt;!ndash;</div>ndash;gt;-->
+
+
+<!--lt;!ndash;</body>ndash;gt;-->
+<!--lt;!ndash;</html>ndash;gt;-->
+
+<!--lt;!ndash;<!DOCTYPE html>ndash;gt;-->
+<!--lt;!ndash;<html lang="en">ndash;gt;-->
+<!--lt;!ndash;<head>ndash;gt;-->
+<!--lt;!ndash;    <meta charset="UTF-8">ndash;gt;-->
+<!--lt;!ndash;    <title>注册界面</title>ndash;gt;-->
+<!--lt;!ndash;    <link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">ndash;gt;-->
+<!--lt;!ndash;    <link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../easyui/jquery.min.js"></script>ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>ndash;gt;-->
+<!--lt;!ndash;    <script type="text/javascript" src="../js/registe.js"></script>ndash;gt;-->
+<!--lt;!ndash;</head>ndash;gt;-->
+<!--lt;!ndash;    <body  style="background-color: #f9f9f9;background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">ndash;gt;-->
+<!--lt;!ndash;        <div id="p" class="easyui-panel" style="background:transparent;width: 60px;border:transparent "ndash;gt;-->
+<!--lt;!ndash;                   data-options="style:{position:'absolute',left:400,top:0}">ndash;gt;-->
+<!--lt;!ndash;            <p>ndash;gt;-->
+<!--lt;!ndash;            <div style="width:50px; height:50px; border-radius:100%; overflow:hidden;">ndash;gt;-->
+<!--lt;!ndash;                <img src="../img/logo.jpg" style="max-width: 50px;max-height: 50px;vertical-align:middle"/>ndash;gt;-->
+<!--lt;!ndash;            </div>ndash;gt;-->
+<!--lt;!ndash;            </p>ndash;gt;-->
+<!--lt;!ndash;        </div>ndash;gt;-->
+
+<!--lt;!ndash;        <div id="p2" class="easyui-panel" style="background:transparent;width: 400px;border:transparent "ndash;gt;-->
+<!--lt;!ndash;             data-options="style:{position:'absolute',left:460,top:4}">ndash;gt;-->
+<!--lt;!ndash;            <p>ndash;gt;-->
+<!--lt;!ndash;            <font size="6" style="color: #0052A3">在线考试系统</font>ndash;gt;-->
+<!--lt;!ndash;            </p>ndash;gt;-->
+<!--lt;!ndash;        </div>ndash;gt;-->
+
+<!--lt;!ndash;        <div id="p1" class="easyui-panel" style="background:transparent;width: 350px;border:transparent "ndash;gt;-->
+<!--lt;!ndash;             data-options="style:{position:'absolute',left:1300,top:0}">ndash;gt;-->
+<!--lt;!ndash;            <p>ndash;gt;-->
+<!--lt;!ndash;                <a class="easyui-linkbutton"  data-options="plain:true" ><font size="2">首页</font></a>ndash;gt;-->
+<!--lt;!ndash;                <a class="easyui-linkbutton"  data-options="plain:true" ><font size="2">管理端</font></a>ndash;gt;-->
+<!--lt;!ndash;                <a class="easyui-linkbutton" data-options="plain:true" href="../html/login.html"><font size="2">返回</font></a>ndash;gt;-->
+<!--lt;!ndash;            </p>ndash;gt;-->
+<!--lt;!ndash;        </div>ndash;gt;-->
+
+<!--lt;!ndash;        <div id="p41" class="easyui-panel" style="background-color: #FFFFFF;width: 700px;height: 500px;border:transparent"ndash;gt;-->
+<!--lt;!ndash;             data-options="style:{position:'absolute',left:600,top:200}">ndash;gt;-->
+<!--lt;!ndash;            <p style="text-align: center">ndash;gt;-->
+<!--lt;!ndash;                <font size="6">注册账号</font>ndash;gt;-->
+<!--lt;!ndash;            </p>ndash;gt;-->
+<!--lt;!ndash;            <form id="ff">ndash;gt;-->
+<!--lt;!ndash;                <table>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:15px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">身份:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input type="radio" name="remenber" value="student" /><font size="3">学生</font>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <input type="radio" name="remenber" value="teacher" /><font size="3">教师</font>ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">姓名:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input class="easyui-textbox" id="name" style="width:50%;height:32px">ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:15px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">账号:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input class="easyui-textbox" id="account" style="width:50%;height:32px">ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:20px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">密码:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input class="easyui-passwordbox" id="password" style="width:50%;height:32px">ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:15px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">确认密码:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input class="easyui-passwordbox" id="repassword" style="width:50%;height:32px">ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:15px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">密保问题:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input class="easyui-textbox" id="question" style="width:50%;height:32px">ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:15px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td>ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <font size="3">密保答案:</font>ndash;gt;-->
+<!--lt;!ndash;                            <input class="easyui-textbox" id="answer" style="width:50%;height:32px">ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr style="height:15px ">ndash;gt;-->
+<!--lt;!ndash;                        <td></td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                    <tr>ndash;gt;-->
+<!--lt;!ndash;                        <td style="text-align: center">ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            ndash;gt;-->
+<!--lt;!ndash;                            <a href="#" class="easyui-linkbutton" style="width: 100px;text-align: center"ndash;gt;-->
+<!--lt;!ndash;                               onclick="registe()">ndash;gt;-->
+<!--lt;!ndash;                                立即注册ndash;gt;-->
+<!--lt;!ndash;                            </a>ndash;gt;-->
+<!--lt;!ndash;                        </td>ndash;gt;-->
+<!--lt;!ndash;                    </tr>ndash;gt;-->
+<!--lt;!ndash;                </table>ndash;gt;-->
+<!--lt;!ndash;            </form>ndash;gt;-->
+<!--lt;!ndash;        </div>ndash;gt;-->
+<!--lt;!ndash;    </body>ndash;gt;-->
+<!--lt;!ndash;</html>ndash;gt;-->

@@ -1,0 +1,722 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>厦门理工学院教务</title>
+    <link type="text/css" rel="styleSheet" href="../easyui/app.4ce02310a036c1f949e6bfac1a75d6cc.css"/>
+    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/5.d14cc1be6ec7e100eeef.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/0.6242f122ed89abd1f691.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" src="../html/static/js/7.d6f7637362d3113e0e5c.js"></script>
+
+    <script type="text/javascript" src="../js/showdata.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+
+    <script src="../html/static/tinymce4.7.5/tinymce.min.js"></script>
+
+    <script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <!-- 考试数 -->
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(document).ready(
+                function ajaxRePost(url,params){
+                    var message = "";
+                    var options={
+                        type:"GET",
+                        url:"selectexamInformationfocounts.action",
+                        data:{},
+                        async:false,
+                        success:function (msg) {
+                            message=msg;
+                        }
+                    };
+                    $.ajax(options);
+                    // alert(message);
+                    //                    debugger;
+                    $("#count2").text(message);
+                    return message;
+                }
+            )
+        });
+        //
+    </script>
+    <!-- 题目数 -->
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(document).ready(
+                function ajaxRePost(url,params){
+                    var message = "";
+                    var options={
+                        type:"GET",
+                        url:"selectquestioncounts.action",
+                        data:{},
+                        async:false,
+                        success:function (msg) {
+                            message=msg;
+                        }
+                    };
+                    $.ajax(options);
+                    // alert(message);
+                    //                    debugger;
+                    $("#count").text(message);
+                    return message;
+                }
+            )
+        });
+        //
+    </script>
+    <!-- 试卷数 -->
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(document).ready(
+                function ajaxRePost(url,params){
+                    var message = "";
+                    var options={
+                        type:"GET",
+                        url:"selectexamcounts.action",
+                        data:{},
+                        async:false,
+                        success:function (msg) {
+                            message=msg;
+                        }
+                    };
+                    $.ajax(options);
+                    // alert(message);
+                    //                    debugger;
+                    $("#count1").text(message);
+                    return message;
+                }
+            )
+        });
+        //
+    </script>
+    <!-- 学生数 -->
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(document).ready(
+                function ajaxRePost(url,params){
+                    var message = "";
+                    var options={
+                        type:"GET",
+                        url:"selectstudentcounts.action",
+                        data:{},
+                        async:false,
+                        success:function (msg) {
+                            message=msg;
+                        }
+                    };
+                    $.ajax(options);
+                    // alert(message);
+                    //                    debugger;
+                    $("#count3").text(message);
+                    return message;
+                }
+            )
+        });
+        //
+    </script>
+    <!-- 教师数 -->
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(document).ready(
+                function ajaxRePost(url,params){
+                    var message = "";
+                    var options={
+                        type:"GET",
+                        url:"selectteachercounts.action",
+                        data:{},
+                        async:false,
+                        success:function (msg) {
+                            message=msg;
+                        }
+                    };
+                    $.ajax(options);
+                    // alert(message);
+                    //                    debugger;
+                    $("#count4").text(message);
+                    return message;
+                }
+            )
+        });
+        //
+    </script>
+
+    <!--后台数据展示-->
+<!--    <script type="text/javascript">-->
+<!--    window.onload = function qq() {-->
+
+<!--    $.ajax({-->
+<!--    type:"POST",-->
+<!--    url:"selectquestioncounts.action",-->
+<!--    async:true,-->
+<!--    dataType:"json",-->
+<!--    success:function (data) {-->
+<!--    console.log(data);-->
+<!--    }-->
+
+<!--    });-->
+<!--    }-->
+<!--    </script>-->
+    <style type="text/css">
+        .basicInfo-left {
+            width: 250px;
+            height: 250px;
+        }
+
+        .basicInfo-left img {
+            width: 100%;
+            height: 100%;
+            border-radius: 450px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div data-v-632e4b08="" clas="main">
+        <div data-v-632e4b08="" class="header-area vue-fixed-header">
+            <div data-v-632e4b08="" class="clever-main-menu">
+                <div data-v-632e4b08="" class="classy-nav-container breakpoint-off">
+                    <nav data-v-632e4b08="" id="cleverNav" class="classy-navbar justify-content-between">
+                        <img src="../html/static/img/core-img/login-logo.png">
+                        <!--	<a data-v-632e4b08="" href="/"
+                             class="nav-brand hidden-sm-only">厦门理工学院</a>-->
+                        <div data-v-632e4b08="" class="classy-menu">
+                            <div data-v-632e4b08="" class="classynav">
+                                <!--                                <div data-v-632e4b08="" class="search-area hidden-sm-only">-->
+                                <!--                                    <div data-v-632e4b08="" class="el-input el-input&#45;&#45;prefix">-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;<input type="search" autocomplete="off" name="search" id="search"-->
+                                <!--                                                      placeholder="搜索" class="el-input__inner"><span-->
+                                <!--                                            class="el-input__prefix"><i-->
+                                <!--                                            class="el-input__icon el-icon-search"></i></span>-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;-->
+                                <!--                                        &lt;!&ndash;&ndash;&gt;-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <ul data-v-632e4b08="" role="menubar" class="el-menu--horizontal el-menu">
+                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item is-active"
+                                        style="color: rgb(35, 35, 35); border-bottom-color: rgb(35, 35, 35);"><a
+                                            href="../html/welcome.html">首页
+                                    </a>
+                                    </li>
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item"-->
+                                    <!--                                        style="color: rgba(0, 0, 0, 0.45); border-bottom-color: transparent;">考试-->
+                                    <!--                                    </li>-->
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" tabindex="0" class="el-menu-item"-->
+                                    <!--                                        style="color: rgba(0, 0, 0, 0.45); border-bottom-color: transparent;">课程-->
+                                    <!--                                    </li>-->
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" aria-haspopup="true" class="el-submenu"-->
+                                    <!--                                        tabindex="0">-->
+                                    <!--                                        <div class="el-submenu__title"-->
+                                    <!--                                             style="border-bottom-color: transparent; color: rgba(0, 0, 0, 0.45);">记录<i-->
+                                    <!--                                                class="el-submenu__icon-arrow el-icon-arrow-down"></i></div>-->
+                                    <!--                                        <div class="el-menu&#45;&#45;horizontal" style="display: none;">-->
+                                    <!--                                            <ul role="menu" class="el-menu el-menu&#45;&#45;popup el-menu&#45;&#45;popup-bottom-start">-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">考试记录-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">错题本-->
+                                    <!--                                                </li>-->
+                                    <!--                                            </ul>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </li>-->
+                                    <!--                                    <li data-v-632e4b08="" role="menuitem" aria-haspopup="true" class="el-submenu"-->
+                                    <!--                                        tabindex="0">-->
+                                    <!--                                        <div class="el-submenu__title"-->
+                                    <!--                                             style="border-bottom-color: transparent; color: rgba(0, 0, 0, 0.45);">帮助<i-->
+                                    <!--                                                class="el-submenu__icon-arrow el-icon-arrow-down"></i></div>-->
+                                    <!--                                        <div class="el-menu&#45;&#45;horizontal" style="display: none;">-->
+                                    <!--                                            <ul role="menu" class="el-menu el-menu&#45;&#45;popup el-menu&#45;&#45;popup-bottom-start">-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    源码地址-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    部署文档-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    更新日志-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    规划总览-->
+                                    <!--                                                </li>-->
+                                    <!--                                                <li data-v-632e4b08="" role="menuitem" tabindex="-1"-->
+                                    <!--                                                    class="el-menu-item" style="color: rgba(0, 0, 0, 0.45);">-->
+                                    <!--                                                    管理后台-->
+                                    <!--                                                </li>-->
+                                    <!--                                            </ul>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </li>-->
+                                    <!---->
+                                </ul>
+                                <div data-v-632e4b08="" class="register-login-area"><a href="../html/registe.html"
+                                                                                       class="btn">注册</a>
+                                    <a href="../html/login.html" class="btn">登录</a><a href="../html/login.html" class="btn">忘记密码</a></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <section data-v-632e4b08="" class="main">
+            <div class="main-wrapper">
+                <div class="main-content">
+                    <div>
+                        <div class="hero-area el-row is-justify-center is-align-middle el-row--flex">
+                            <div class="el-col el-col-24">
+                                <div class="hero-content">
+                                    <h2>厦门理工学院在线考试平台</h2>
+                                    <h4>基于 Spring Mybatis SpringMVC 搭建的新一代在线考试平台</h4>
+                                    <h4>支持学生考试,成绩分析与错题统计等功能</h4>
+
+                                    <a href="../html/login.html" class="btn clever-btn">开始考试</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cool-facts-area padding-80-0">
+                            <div class="el-row is-justify-center el-row--flex"
+                                 style="margin-left: -25px; margin-right: -25px;">
+                                <div class="el-col el-col-4" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-cool-facts-area mb-80" style="">
+                                        <div class="icon"><img src="../html/static/img/core-img/star.png" alt=""></div>
+                                        <h2><span class="counter" id="count3">
+
+													</span></h2>
+                                        <h5>学生数</h5>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-4" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-cool-facts-area mb-80" style="">
+                                        <div class="icon"><img src="../html/static/img/core-img/star.png" alt=""></div>
+                                        <h2><span class="counter" id="count4">
+
+													</span></h2>
+                                        <h5>教师数</h5>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-4" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-cool-facts-area mb-80" style="">
+                                        <div class="icon"><img src="../html/static/img/core-img/star.png" alt=""></div>
+                                        <h2><span class="counter" id="count1">
+
+													</span></h2>
+                                        <h5>试卷数</h5>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-4" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-cool-facts-area mb-80" style="">
+                                        <div class="icon"><img src="../html/static/img/core-img/star.png" alt=""></div>
+                                        <h2><span class="counter" id="count2">
+													</span></h2>
+                                        <h5>考试数</h5>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-4" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-cool-facts-area mb-80" style="">
+                                        <div class="icon"><img src="../html/static/img/core-img/star.png" alt=""></div>
+                                        <h2><span class="counter" id="count">
+
+													</span></h2>
+                                        <h5>题目数</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="popular-courses-area padding-80-0">
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3>热门课程</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row is-justify-center el-row--flex"
+                                 style="margin-left: -25px; margin-right: -25px;">
+                                <div class="el-col el-col-6" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-popular-course"><img
+                                            src="../html/static/img/bg-img/c1.jpg" alt="">
+                                        <div class="course-content">
+                                            <h4>英语语法</h4>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">艺术 &amp; 设计</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p>
+                                        </div>
+                                        <div class="seat-rating-fee d-flex justify-content-between">
+                                            <div class="seat-rating h-100 d-flex align-items-center">
+                                                <div class="seat"><i aria-hidden="true" class="el-icon-user-solid"></i>
+                                                    10
+                                                </div>
+                                                <div class="rating"><i aria-hidden="true" class="el-icon-star-on"></i>
+                                                    4.5
+                                                </div>
+                                            </div>
+                                            <div class="course-fee h-100"><a href="#" class="free">免费</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-6" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-popular-course mb-80"><img
+                                            src="../html/static/img/bg-img/c2.jpg" alt="">
+                                        <div class="course-content">
+                                            <h4>词汇</h4>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">艺术 &amp; 设计</a></div>
+                                            <p>专业英语词汇培训辅导班，系统方法帮您高效提升英语词汇培训成绩</p>
+                                        </div>
+                                        <div class="seat-rating-fee d-flex justify-content-between">
+                                            <div class="seat-rating h-100 d-flex align-items-center">
+                                                <div class="seat"><i aria-hidden="true" class="el-icon-user-solid"></i>
+                                                    10
+                                                </div>
+                                                <div class="rating"><i aria-hidden="true" class="el-icon-star-on"></i>
+                                                    4.5
+                                                </div>
+                                            </div>
+                                            <div class="course-fee h-100"><a href="#">免费</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-6" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-popular-course mb-80"><img
+                                            src="../html/static/img/bg-img/c3.jpg" alt="">
+                                        <div class="course-content">
+                                            <h4>说明文写作</h4>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">艺术 &amp; 设计</a></div>
+                                            <p>精选辅导教程，训练学生阅读和写作说明文的能力,以及培养自身的逻辑思维等等。</p>
+                                        </div>
+                                        <div class="seat-rating-fee d-flex justify-content-between">
+                                            <div class="seat-rating h-100 d-flex align-items-center">
+                                                <div class="seat"><i aria-hidden="true" class="el-icon-user-solid"></i>
+                                                    10
+                                                </div>
+                                                <div class="rating"><i aria-hidden="true" class="el-icon-star-on"></i>
+                                                    4.5
+                                                </div>
+                                            </div>
+                                            <div class="course-fee h-100"><a href="#">免费</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row is-justify-center el-row--flex"
+                                 style="margin-left: -25px; margin-right: -25px;">
+                                <div class="el-col el-col-6" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-popular-course"><img
+                                            src="../html/static/img/bg-img/c1.jpg" alt="">
+                                        <div class="course-content">
+                                            <h4>英语语法</h4>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">艺术 &amp; 设计</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p>
+                                        </div>
+                                        <div class="seat-rating-fee d-flex justify-content-between">
+                                            <div class="seat-rating h-100 d-flex align-items-center">
+                                                <div class="seat"><i aria-hidden="true" class="el-icon-user-solid"></i>
+                                                    10
+                                                </div>
+                                                <div class="rating"><i aria-hidden="true" class="el-icon-star-on"></i>
+                                                    4.5
+                                                </div>
+                                            </div>
+                                            <div class="course-fee h-100"><a href="#" class="free">免费</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-6" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-popular-course mb-80"><img
+                                            src="../html/static/img/bg-img/c2.jpg" alt="">
+                                        <div class="course-content">
+                                            <h4>词汇</h4>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">艺术 &amp; 设计</a></div>
+                                            <p>专业英语词汇培训辅导班，系统方法帮您高效提升英语词汇培训成绩</p>
+                                        </div>
+                                        <div class="seat-rating-fee d-flex justify-content-between">
+                                            <div class="seat-rating h-100 d-flex align-items-center">
+                                                <div class="seat"><i aria-hidden="true" class="el-icon-user-solid"></i>
+                                                    10
+                                                </div>
+                                                <div class="rating"><i aria-hidden="true" class="el-icon-star-on"></i>
+                                                    4.5
+                                                </div>
+                                            </div>
+                                            <div class="course-fee h-100"><a href="#">免费</a></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="el-col el-col-6" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-popular-course mb-80"><img
+                                            src="../html/static/img/bg-img/c3.jpg" alt="">
+                                        <div class="course-content">
+                                            <h4>说明文写作</h4>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">艺术 &amp; 设计</a></div>
+                                            <p>精选辅导教程，训练学生阅读和写作说明文的能力,以及培养自身的逻辑思维等等。</p>
+                                        </div>
+                                        <div class="seat-rating-fee d-flex justify-content-between">
+                                            <div class="seat-rating h-100 d-flex align-items-center">
+                                                <div class="seat"><i aria-hidden="true" class="el-icon-user-solid"></i>
+                                                    10
+                                                </div>
+                                                <div class="rating"><i aria-hidden="true" class="el-icon-star-on"></i>
+                                                    4.5
+                                                </div>
+                                            </div>
+                                            <div class="course-fee h-100"><a href="#">免费</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-courses-area padding-80-0">
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                         -->
+                        </div>
+                        <div class="blog-area padding-80-0">
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading"><h3>博客分享</h3></div>
+                                </div>
+                            </div>
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row is-justify-center el-row--flex"
+                                 style="margin-left: -25px; margin-right: -25px;">
+                                <div class="el-col el-col-10" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-blog-area mb-80" style=""><img src="static/img/blog-img/1.jpg"
+                                                                                      alt="">
+                                        <div class="blog-content"><a href="#" class="blog-headline"><h4>英语语法师</h4></a>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span> <a href="#">艺术
+                                                &amp; 设计</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p></div>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-10" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-blog-area mb-80" style=""><img src="static/img/blog-img/2.jpg"
+                                                                                      alt="">
+                                        <div class="blog-content"><a href="#" class="blog-headline"><h4>英语语法师</h4></a>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span> <a href="#">艺术
+                                                &amp; 设计</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-area padding-80-0">
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+
+                                </div>
+                            </div>
+                            <div class="el-row is-justify-center el-row--flex"
+                                 style="margin-left: -25px; margin-right: -25px;">
+                                <div class="el-col el-col-10" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-blog-area mb-80" style=""><img src="static/img/blog-img/1.jpg"
+                                                                                      alt="">
+                                        <div class="blog-content"><a href="#" class="blog-headline"><h4>英语语法师</h4></a>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span> <a href="#">艺术
+                                                &amp; 设计</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p></div>
+                                    </div>
+                                </div>
+                                <div class="el-col el-col-10" style="padding-left: 25px; padding-right: 25px;">
+                                    <div class="single-blog-area mb-80" style=""><img src="static/img/blog-img/2.jpg"
+                                                                                      alt="">
+                                        <div class="blog-content"><a href="#" class="blog-headline"><h4>英语语法师</h4></a>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span> <a href="#">艺术
+                                                &amp; 设计</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--                        <div class="popular-courses-area padding-80-0">-->
+<!--                            <div class="el-row">-->
+<!--                                <div class="el-col el-col-24">-->
+<!--                                    <div class="section-heading">-->
+<!--                                        <h3></h3>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash;                         &ndash;&gt;-->
+<!--                        </div>-->
+                        <div class="popular-courses-area padding-80-0">
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3>教师介绍</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row">
+                                <div class="el-col el-col-24">
+                                    <div class="section-heading">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-row is-justify-center el-row--flex"
+                                 style="margin-left: -25px; margin-right: -25px;">
+                                <div class="el-col el-col-13" style="padding-left: 400px; padding-right: 25px;">
+                                    <div class=" mb-80 basicInfo-left "><img
+                                            src="../html/static/img/avatar/5.jpg" alt="">
+                                        <div class="blog-content"><a href="#" class="blog-headline">
+                                            <br>
+                                            <h2>龙絳雪老师</h2>
+                                        </a>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">硕士 &amp; 教授</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。<br><br></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="el-col el-col-11" style="padding-left: 45px; padding-right: 25px;">
+                                    <div class="  basicInfo-left "><img
+                                            src="../html/static/img/avatar/3.jpg" alt="">
+                                        <div class="blog-content"><a href="#" class="blog-headline">
+                                            <br>
+                                            <h2>龙絳雪老师</h2>
+                                        </a>
+                                            <div class="meta d-flex align-items-center"><a href="#">Tanma</a> <span><i
+                                                    aria-hidden="true" class="fa fa-circle"></i></span>
+                                                <a href="#">硕士 &amp; 教授</a></div>
+                                            <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。<br><br></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+<!--                            <br>-->
+<!--                            <br>-->
+<!--                            <br>-->
+
+                        </div>
+
+
+
+                            <br>
+                            <br>
+                            <br>
+
+                        </div>
+<!--                        <div class="popular-courses-area padding-40-0">-->
+<!--                            <div class="el-row">-->
+<!--&lt;!&ndash;                                <div class="el-col el-col-24">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="section-heading">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                        <h3></h3>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash;                         &ndash;&gt;-->
+<!--                        </div>-->
+                        <div class="el-row">
+                            <div class="el-col el-col-24">
+                                <div class="section-heading">
+                                    <h3></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-row">
+                            <div class="el-col el-col-24">
+                                <div class="section-heading">
+                                    <h3></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-753259cd="" class="footer">
+                            <div data-v-753259cd="" class="container">
+                                <div data-v-753259cd="" class="site-info">
+                                    <div data-v-753259cd="" class="el-row">
+
+
+                                    </div>
+
+                                </div>
+                                <div data-v-753259cd="" class="line"></div>
+                                <div data-v-753259cd="" class="el-row"
+                                     style="margin-left: -10px; margin-right: -10px; margin-top: 50px;">
+                                    <div data-v-753259cd="" class="el-col el-col-12 el-col-offset-8"
+                                         style="padding-left: 10px; padding-right: 10px;">
+                                        <div data-v-753259cd="" class="copyright">
+                                            <h4 data-v-753259cd="" class="content-c2" style="text-align: center;">
+                                                厦门理工学院版权所有©2002-2019年</h4>
+                                            <ul data-v-753259cd="" class="privacy">
+                                                <li data-v-753259cd="" class="content-c1"><a data-v-753259cd=""
+                                                                                             class="content-c0">法律声明</a>
+                                                </li>
+                                                <li data-v-753259cd="" class="content-c1"><a data-v-753259cd=""
+                                                                                             class="content-c0">隐私条款</a>
+                                                </li>
+                                                <li data-v-753259cd="" class="content-c1"><a data-v-753259cd=""
+                                                                                             target="_blank"
+                                                                                             href="https://gitee.com/wells2333/spring-microservice-exam"
+                                                                                             class="content-c0">开发者中心</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-753259cd="" class="el-row" style="margin-left: -10px; margin-right: -10px;">
+                                    <div data-v-753259cd="" class="el-col el-col-12 el-col-offset-6"
+                                         style="padding-left: 10px; padding-right: 10px;">
+                                        <div data-v-753259cd="" class="cop"><a data-v-753259cd=""
+                                                                               href="https://gitee.com/wells2333"
+                                                                               target="_blank"
+                                                                               class="content-c3"><span
+                                                data-v-753259cd="" class="content-c3">闽ICP备05025251号-1</span> <span
+                                                data-v-753259cd="" class="content-c3">闽ICP备05025251号-1</span></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

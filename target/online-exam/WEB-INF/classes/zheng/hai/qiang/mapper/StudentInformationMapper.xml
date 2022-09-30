@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zheng.hai.qiang.mapper.StudentInformationMapper">
+
+
+    <select id="selectstudentcounts"  resultType="Integer" >
+        SELECT COUNT(*) FROM student t
+    </select>
+
+    <select id="selectteachercounts"  resultType="Integer" >
+        SELECT COUNT(*) FROM teacher t
+    </select>
+
+
+    <select id="findExamResult" parameterType="hashmap" resultType="zheng.hai.qiang.pojo.ExamResult" >
+        SELECT * FROM examresult t
+        <where>
+            <if test="#{name} == null">
+                t.`person` =#{name}
+            </if>
+<!--            <if test="#{name} != null">-->
+<!--                t.`person` =#{name}-->
+<!--            </if>-->
+            <if test="#{examName} != null">
+                and t.`examName` like '%${examName}%'
+            </if>
+
+            <if test="#{examSubject} != null">
+                and t.`subject` like '%${examSubject}%'
+            </if>
+
+            <if test="#{examCode} != null">
+                and t.`examCode` like '%${examCode}%'
+            </if>
+
+            <if test="#{studentAccount} != null">
+                and t.`studentaccount` like '%${studentAccount}%'
+            </if>
+
+            <if test="#{studentName} != null">
+                and t.`studentname` like '%${studentName}%'
+            </if>
+        </where>
+    </select>
+
+</mapper>

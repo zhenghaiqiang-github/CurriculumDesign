@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zheng.hai.qiang.mapper.TeacherQuestionMapper">
+
+    <select id="selectquestioncounts"  resultType="Integer" >
+        SELECT COUNT(*) FROM question t
+    </select>
+    <select id="findQuestionAll"  resultType="zheng.hai.qiang.pojo.Question" >
+        SELECT t.`id`,t.`question`,t.`answer`,t.`optionA`,t.`optionB`,t.`optionC`,t.`optionD`,t.`subject`,t.`book`,t.`chapter`,t.`difficulty` FROM question t WHERE t.`person` = #{0};
+    </select>
+
+    <select id="findQuestion" parameterType="hashmap" resultType="zheng.hai.qiang.pojo.Question" >
+        SELECT t.`id`,t.`question`,t.`answer`,t.`optionA`,t.`optionB`,t.`optionC`,t.`optionD`,t.`subject`,t.`book`,t.`chapter`,t.`difficulty` FROM question t
+        <where>
+            <if test="#{name} != null">
+                t.`person` =#{name}
+            </if>
+
+            <if test="#{selectQuestion} != null">
+                and t.`question` like '%${selectQuestion}%'
+            </if>
+
+            <if test="#{selectSubject} != null">
+                and t.`subject` like '%${selectSubject}%'
+            </if>
+        </where>
+    </select>
+
+
+    <select id="addQuedtion"  parameterType="zheng.hai.qiang.pojo.Question">
+        INSERT INTO question VALUES(NULL,'${question}','${answer}','${optionA}','${optionB}','${optionC}','${optionD}','${subject}','${person}',NULL,NULL,'${book}','${chapter}','${difficulty}');
+    </select>
+
+    <select id="findQuestionById" parameterType="hashmap" resultType="zheng.hai.qiang.pojo.Question" >
+        SELECT t.`id`,t.`question`,t.`answer`,t.`optionA`,t.`optionB`,t.`optionC`,t.`optionD`,t.`subject`,t.`book`,t.`chapter`,t.`difficulty` FROM question t where t.`id` =#{id};
+    </select>
+
+    <update id="updateQuestion" parameterType="zheng.hai.qiang.pojo.Question">
+        UPDATE question
+            SET question.question = #{question},
+                question.answer = #{answer},
+                question.optionA = #{optionA},
+                question.optionB = #{optionB},
+                question.optionC = #{optionC},
+                question.optionD = #{optionD},
+                question.subject = #{subject},
+                question.book = #{book},
+                question.chapter = #{chapter}
+         WHERE question.id = #{id};
+    </update>
+
+    <delete id="deleQuedtion" parameterType="hashmap">
+        DELETE FROM question WHERE question.id = #{id}
+    </delete>
+
+</mapper>
